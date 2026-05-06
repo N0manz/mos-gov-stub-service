@@ -1,14 +1,14 @@
 server:
-  port: ${SERVER_PORT}
+  port: ${SERVER_PORT:8081}
 
 spring:
   application:
-    name: ${SERVICE_NAME}
+    name: ${SERVICE_NAME:payment-stub}
   webflux:
-    base-path: ${URL_PREFIX}
+    base-path: ${URL_PREFIX:}
 
 springdoc:
   api-docs:
-    path: ${API_PATH}
+    path: ${API_PATH:/v3/api-docs}
   swagger-ui:
-    path: ${SWAGGER_PATH}
+    path: ${SWAGGER_PATH:/swagger-ui.html}
